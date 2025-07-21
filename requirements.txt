@@ -1,0 +1,9 @@
+ultralytics==8.0.196
+numpy==1.24.3
+pandas>=1.5.0
+pillow>=9.0.0
+pyyaml>=6.0
+matplotlib>=3.5.0
+opencv-python>=4.7.0
+jupyter>=1.0.0
+ipykernel>=6.0.0

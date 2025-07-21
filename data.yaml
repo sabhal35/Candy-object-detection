@@ -1,0 +1,14 @@
+path: dataset
+train: images/train
+val: images/val
+nc: 9
+names:
+- 100_Grand
+- 3_Musketeers
+- Baby_Ruth
+- Butterfingers
+- Crunch
+- Midnight_Milky_Way
+- Milky_Way
+- Snickers
+- Twix

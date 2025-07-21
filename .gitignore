@@ -1,0 +1,8 @@
+yolov8n.pt
+dataset/
+runs/
+test_results/
+Images/
+Labels/
+Annotation CSV Files/
+.DS_Store
