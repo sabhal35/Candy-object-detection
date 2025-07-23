@@ -4,87 +4,80 @@ Before starting, make sure you have Anaconda or Miniconda installed ([Download h
 
 ## Step 1: Download Project
 
-Download the `Candy-object-detection` folder to your computer. Open a terminal/command prompt and navigate to the project directory:
-
+1. Download or clone the Candy-object-detection folder to your computer
+2. Open a terminal (macOS/Linux) or Command Prompt/Anaconda Prompt (Windows)
+3. Navigate to the project folder:
 ```bash
 cd path/to/Candy-object-detection
 ```
 
-## Step 2: Create Conda Environment
+## Step 2: Set Up the Conda Environment
 
-Create and activate the environment from the provided `environment.yml`:
+Create a new environment using the included `environment.yml` file:
 
 ```bash
 conda env create -f environment.yml
 conda activate candy_detection
 ```
+This installs all necessary packages defined in the `environment.yml` file
 
-## Step 3: Download and Prepare the Dataset
+## Step 3: Download the Dataset
 
 The Kaggle dataset is provided here: **Candy Brands for Object Detection** [Kaggle Link](https://www.kaggle.com/datasets/ruopengan/candy-brands-for-object-detection?resource=download)
 
-When you download and extract the Kaggle dataset archive, it contains two main folders:
+After extracting the downloaded ZIP file, you will see:
 - `annotation csv files/` — CSV annotation files
 - `Images/` — Candy images
 
-### Organize these folders into your project structure:
-You will move:
-- All images into the `Images/` folder in the project root
-- All CSV annotation files into the `Annotation_CSV_Files/` folder
+### Move these folders into your project:
 
-Run the provided data preparation notebook cells to:
-- Automatically organize files
-- Convert CSV annotations to YOLO format labels
-- Create a train/validation split (default 90/10)
-- Generate the `data.yaml` configuration file
+* Put all images into the `Images/` folder in the project root
+* Put all CSV files into the `Annotation_CSV_Files/` folder
 
 ## Step 4: Launch Jupyter Notebook
 
-Start the Jupyter notebook server:
+Start Jupyter from the terminal or prompt:
 
 ```bash
 jupyter notebook
 ```
 
-Open `Candy_Object_Detection.ipynb` and run the setup and data preparation cells.
+In your browser, open the file `Candy_Object_Detection.ipynb`
 
-## Step 5: Run Cells in the Main Notebook
+## Step 5: Run Cells in the Notebook
 
-### Setup and Data Preparation
-- Moves images and CSVs to correct folders
-- Converts CSV annotations to YOLO .txt format
-- Splits dataset into training and validation sets
-- Creates `data.yaml` for YOLO training
+Go through the notebook cells in order 
 
-### Model Training
-- Trains YOLOv8 model (default 20 epochs, change to 100 for full training)
-- Saves trained model weights in `runs/detect/candy_detection/weights/`
+They will:
+* Move files to the correct locations
+* Convert CSV annotations to YOLO .txt format
+* Split the dataset into training and validation sets
+* Generate the data.yaml file for training
 
-### Testing and Evaluation
-- Loads the trained model
-- Tests on validation or new images
-- Displays and saves detection results
+Then, continue with model training and testing
 
-## Project Folder Structure
+## Project Structure
+
+Your folder should look like this after setup:
 
 ```
 Candy-object-detection/
 ├── Candy_Object_Detection.ipynb    # main notebook
-├── classes.txt                     # candy class names
-├── data.yaml                       # dataset config for YOLO
-├── environment.yml                 # conda environment dependencies
-├── yolov8n.pt                      # pretrained YOLOv8 base model
+├── classes.txt                     # list of candy classes
+├── data.yaml                       # YOLO config file
+├── environment.yml                 # conda environment file
+├── yolov8n.pt                      # pretrained YOLO model
 ├── requirements.txt                # python dependencies
-├── Annotation_CSV_Files/           # original CSV annotations (from Kaggle)
-├── Images/                         # candy images
-├── labels/                         # YOLO format labels (.txt)
+├── Annotation_CSV_Files/           # CSV files from Kaggle
+├── Images/                         # raw images
+├── labels/                         # YOLO label files
 ├── dataset/                        # train/val splits
 │   ├── images/train/
 │   ├── images/val/
 │   ├── labels/train/
 │   └── labels/val/
-├── runs/                           # training outputs
-└── test_results/                   # detection result outputs
+├── runs/                           # training results
+└── test_results/                   # results from model testing
 ```
 
 ## Dataset Source
