@@ -19,7 +19,7 @@ Create a new environment using the included `environment.yml` file:
 conda env create -f environment.yml
 conda activate candy_detection
 ```
-This installs all necessary packages defined in the `environment.yml` file
+This installs all necessary packages listed in the environment.yml file
 
 ## Step 3: Download the Dataset
 
@@ -36,7 +36,7 @@ After extracting the downloaded ZIP file, you will see:
 
 ## Step 4: Launch Jupyter Notebook
 
-Start Jupyter from the terminal or prompt:
+Start Jupyter from the terminal or command prompt:
 
 ```bash
 jupyter notebook
@@ -48,7 +48,7 @@ In your browser, open the file `Candy_Object_Detection.ipynb`
 
 Go through the notebook cells in order 
 
-They will:
+The notebook will:
 * Move files to the correct locations
 * Convert CSV annotations to YOLO .txt format
 * Split the dataset into training and validation sets
