@@ -1,9 +1,10 @@
 yolov8n.pt
+yolov8s.pt
 dataset/
 runs/
 test_results/
 Images/
 Labels/
-Annotation CSV Files/
-.DS_Store
 .ipynb_checkpoints/
+Annotation_CSV_Files/
+.DS_Store
