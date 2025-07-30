@@ -1,10 +1,10 @@
-100_Grand
-3_Musketeers
-Baby_Ruth
-Butterfingers
 Crunch
-Midnight_Milky_Way
+Baby_Ruth
+Butterfinger
+3_Musketeers
 Milky_Way
 Snickers
 Twix
+100_Grand
+Midnight_Milky_Way
 Unknown
